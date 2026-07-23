@@ -15,7 +15,7 @@ OOM, CPU Spike, Deadlock을 직접 재현하고 Linux 관제 데이터와 애플
 | OOM 실제 재현·증거 | 미수행 |
 | CPU Spike 실제 재현·증거 | 미수행 |
 | Deadlock 실제 재현·증거 | 미수행 |
-| GitHub Issue 3건 최종 작성 | 실험 후 완료 필요 |
+| GitHub Issue 3건 생성 | 완료(실험 결과 입력 대기) |
 
 ## 저장소 구조
 
@@ -76,7 +76,7 @@ bash scripts/run-agent.sh
 다른 터미널에서 PID를 찾고 5초 간격으로 관제를 시작합니다.
 
 ```bash
-pgrep -af agent-leak-app
+pgrep -ax agent-leak-app
 bash scripts/monitor.sh --name agent-leak-app --interval 5 \
   --output evidence/monitor-$(date +%Y%m%d-%H%M%S).csv
 ```
@@ -134,7 +134,8 @@ bash scripts/monitor.sh --name agent-leak-app --interval 5 \
 - [ ] 환경변수 값은 허용 범위를 지킨다.
 - [ ] 민감정보와 제공 바이너리가 커밋되지 않았다.
 - [ ] [평가 문항](B1-2-Evaluation.md)에 말로 답할 수 있다.
-- [ ] 완성한 리포트를 GitHub Issue 3건으로 등록했다.
+- [x] 장애별 GitHub Issue 3건을 생성했다.
+- [ ] 실제 결과로 Issue 3건을 완성하고 닫았다.
 
 ## 7. 문제 해결
 
