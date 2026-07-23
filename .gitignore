@@ -1,0 +1,18 @@
+# 제공 바이너리와 압축 파일
+agent-leak-app
+agent-app-leak-*
+*.zip
+
+# 실습 환경과 비밀
+.env
+env.sh
+api_keys/
+secret.key
+
+# 원본/대용량 로그
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+.DS_Store
