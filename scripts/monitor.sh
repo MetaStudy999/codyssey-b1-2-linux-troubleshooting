@@ -24,7 +24,7 @@ done
 [[ "$interval" =~ ^[1-9][0-9]*$ ]] || { echo "interval은 1 이상의 정수여야 합니다." >&2; exit 2; }
 
 if [[ -z "$pid" ]]; then
-  pid="$(pgrep -n -f "$name" || true)"
+  pid="$(pgrep -n -x "$name" || true)"
 fi
 [[ "$pid" =~ ^[0-9]+$ ]] || { echo "대상 PID를 찾지 못했습니다." >&2; exit 1; }
 kill -0 "$pid" 2>/dev/null || { echo "PID $pid가 실행 중이 아닙니다." >&2; exit 1; }
